@@ -3,6 +3,8 @@ require_relative('../db/sql_runner')
 
 class Artist
 
+  attr_accessor :id, :name
+
   def initialize(details)
     @id = details['id'].to_i
     @name = details['name']
@@ -17,7 +19,7 @@ class Artist
   # def self.all()
   #   sql = "SELECT * FROM artists"
   #   artists = SqlRunner.run(sql)
-  #   return customers.map{|bands| Artist.new(bands)}
+  #   return artists.map{|bands| Artist.new(bands)}
   # end
 
 end
