@@ -16,10 +16,10 @@ class Artist
     @id = SqlRunner.run(sql, values)[0]["id"].to_i
   end
 
-  # def self.all()
-  #   sql = "SELECT * FROM artists"
-  #   artists = SqlRunner.run(sql)
-  #   return artists.map{|bands| Artist.new(bands)}
-  # end
+  def self.all()
+    sql = "SELECT * FROM artists"
+    artists = SqlRunner.run(sql)
+    return artists.map{|bands| Artist.new(bands)}
+  end
 
 end
