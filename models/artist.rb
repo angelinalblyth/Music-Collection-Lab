@@ -47,11 +47,19 @@ class Artist
     SqlRunner.run(sql, values)
   end
 # What I want to do for deleting an artist is
-# check if the artist has an album. 
+# check if the artist has an album.
 # If they do delete the album or set the artist_id to nil/0
 # then delete the artist
 # if no album just go and delete the artist.
 
+  def find_artist(id)
+    sql = "SELECT * FROM artists where id = $1"
+    values = [@id]
+    persons = SqlRunner.run(sql,values)
+    return persons.map{|person| Artist.new(person)}
+  end
+  #type SELECT * FROM artists WHERE id = 4
+  #returns Shinedown which is correct. 
 
 
 
