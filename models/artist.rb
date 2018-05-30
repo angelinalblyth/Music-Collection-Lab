@@ -59,7 +59,7 @@ class Artist
     return persons.map{|person| Artist.new(person)}
   end
   #type SELECT * FROM artists WHERE id = 4
-  #returns Shinedown which is correct. 
+  #returns Shinedown which is correct.
 
 
 

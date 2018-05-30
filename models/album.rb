@@ -48,4 +48,14 @@ class Album
     SqlRunner.run(sql, values)
   end
 
+  def find_album(id)
+    sql = "SELECT * FROM albums where id = $1"
+    values = [@id]
+    albums = SqlRunner.run(sql,values)
+    return albums.map{|album| Album.new(album)}
+  end
+  #run album2.find_album(2) return the album.
+  #run album2.find_album gives back an error.
+  # album2.find_album(1) returns the second album still.
+  
 end
