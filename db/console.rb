@@ -30,6 +30,8 @@ album5.save()
 album5 = Album.new({'title' => 'Threat to Survival','genre' => 'Rock', 'artist_id' => artist4.id})
 album5.save()
 
+artist1.name = "Fred"
+
 
 binding.pry
 nil
