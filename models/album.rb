@@ -36,4 +36,10 @@ class Album
     return results.map{|artist| Artist.new(artist)}
   end
 
+  def update()
+    sql = "UPDATE albums SET genre = $1 WHERE id = $2"
+    values = [@genre, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

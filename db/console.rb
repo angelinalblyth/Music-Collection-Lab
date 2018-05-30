@@ -30,7 +30,11 @@ album5.save()
 album5 = Album.new({'title' => 'Threat to Survival','genre' => 'Rock', 'artist_id' => artist4.id})
 album5.save()
 
-artist1.name = "Fred"
+artist1.name = "John Michael 'Ozzy' Osbourne"
+artist1.update
+
+album1.genre = "Heavy Metal"
+album1.update
 
 
 binding.pry
