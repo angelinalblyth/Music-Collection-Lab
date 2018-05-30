@@ -40,12 +40,19 @@ class Artist
     SqlRunner.run(sql, values)
   end
 
-
+# Below gives an error if the artist has an album
   def delete()
     sql = "DELETE FROM artists WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
   end
+# What I want to do for deleting an artist is
+# check if the artist has an album. 
+# If they do delete the album or set the artist_id to nil/0
+# then delete the artist
+# if no album just go and delete the artist.
+
+
 
 
 
