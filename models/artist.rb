@@ -22,4 +22,9 @@ class Artist
     return artists.map{|bands| Artist.new(bands)}
   end
 
+  def self.delete_all()
+  sql = "DELETE FROM artists"
+  SqlRunner.run(sql)
+  end
+  
 end

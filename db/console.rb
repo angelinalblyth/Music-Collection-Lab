@@ -2,6 +2,9 @@ require("pry-byebug")
 require_relative("../models/album")
 require_relative("../models/artist")
 
+Album.delete_all()
+Artist.delete_all()
+
 artist1 = Artist.new({'name' => 'Ozzy Osbourne'})
 artist1.save()
 artist2 = Artist.new({'name' => 'Alexisonfire'})
